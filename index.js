@@ -36,7 +36,6 @@ async function fetchAndNotifyQuestions() {
   try {
     const response = await axios.get(forumApiUrl);
     const questions = response.data.questions;
-    console.log("Fetched questions:", questions);
     // Check if questions is an array
     if (!Array.isArray(questions)) {
       console.error("Questions is not an array:", questions);
